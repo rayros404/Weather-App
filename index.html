@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="config.js"></script>
+    <script src="app.js" defer></script>
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="search">
+        <input type="text" class="search-bar" placeholder="Search City" />
+        <button onclick="cityFetch()" class="search-btn">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 16 16"
+            height="1.1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"
+            ></path>
+          </svg>
+        </button>
+        <button onclick="getLocation()" class="loca-btn">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="2 0 20 24"
+            height="1.1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              stroke-width="2"
+              d="M12,22 C12,22 4,16 4,10 C4,5 8,2 12,2 C16,2 20,5 20,10 C20,16 12,22 12,22 Z M12,13 C13.657,13 15,11.657 15,10 C15,8.343 13.657,7 12,7 C10.343,7 9,8.343 9,10 C9,11.657 10.343,13 12,13 L12,13 Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="curr-weather">
+        <img
+          src="https://openweathermap.org/img/wn/10d@2x.png"
+          alt="weather icon"
+          class="icon"
+        />
+        <div class="temp">60</div>
+        <div class="units"><strong>°F</strong></div>
+        <div class="weather-details">
+          <div class="humidity">Humidity: 33%</div>
+          <div class="wind">Wind: 3 mph</div>
+          <div class="air-quality">AQI: Fair</div>
+        </div>
+        <div class="location">
+          <div class="city">Los Angeles</div>
+          <div class="today">Wednesday</div>
+          <div class="description">Clear</div>
+        </div>
+      </div>
+      <div class="forecast">
+        <div class="day0">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day1">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day2">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day3">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day4">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day5">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day6">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+        <div class="day7">
+          <div class="day">Tue</div>
+          <img
+            src="https://openweathermap.org/img/wn/10d.png"
+            alt="icon"
+            class="day-icon"
+          />
+          <div class="temperatures">
+            <span class="high">69°</span>
+            <span class="low">48°</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

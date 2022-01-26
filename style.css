@@ -1,0 +1,153 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: #181818;
+}
+.container {
+  display: grid;
+  height: 300px;
+  width: 800px;
+  padding: 10px;
+  border-radius: 20px;
+  grid-template-rows: 15% 55% 30%;
+  background: #3d3c3c;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar {
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+  margin-right: 3px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: #686464;
+}
+
+input {
+  text-align: center;
+  color: #ffffff;
+}
+
+input[type="text"]::placeholder {
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.search-btn {
+  height: 33px;
+  padding: 10px;
+  margin-right: 3px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  background: #686464;
+  transition: 0.3s;
+}
+.loca-btn {
+  height: 33px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #ffffff;
+  background: #686464;
+  transition: 0.3s;
+}
+
+.search-btn:hover {
+  background: #f06c4c;
+}
+.loca-btn:hover {
+  background: #f06c4c;
+}
+.curr-weather {
+  display: flex;
+  align-items: center;
+  background: #686464;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.icon {
+  margin-left: 50px;
+}
+
+.temp {
+  font-size: 60px;
+  font-weight: 100;
+  margin-left: -10px;
+  color: #ffffff;
+}
+
+.units {
+  position: relative;
+  top: -12px;
+  margin-right: 10px;
+  color: #ffffff;
+}
+
+.weather-details {
+  color: #ffffff;
+}
+
+.location {
+  margin-left: auto;
+  margin-right: 50px;
+  text-align: end;
+  color: #ffffff;
+}
+
+.description {
+  text-transform: capitalize;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #686464;
+}
+
+.day {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 0px;
+  position: relative;
+  top: 5px;
+  color: #ffffff;
+}
+
+.temperatures {
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+  top: -3px;
+}
+
+.day-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.high {
+  color: #ffffff;
+}
+
+.low {
+  color: #aaaaaa;
+}
