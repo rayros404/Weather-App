@@ -1,4 +1,4 @@
-var forcastApi = config.key;
+var forecastApi = config.key;
 
 // gets weather in Westwood on page load #GoBruins #FoursUp
 window.onload = function() {
